@@ -1,0 +1,13 @@
+# Not tested
+# [ v3_vpn_client ]
+basicConstraints        	= critical, CA:FALSE
+subjectKeyIdentifier    	= hash
+authorityKeyIdentifier  	= keyid:always, issuer:always
+keyUsage                	= critical, nonRepudiation, digitalSignature, keyEncipherment
+extendedKeyUsage        	= critical, clientAuth
+subjectAltName          	= @alt_vpn_client
+
+[alt_vpn_server]
+DNS.1 = *.vpn-client.test
+DNS.2 = vpn-client.test
+IP = x.x.x.x
