@@ -6,6 +6,8 @@
 #
 #  https://github.com/openssl/openssl/blob/master/apps/openssl.cnf
 #  https://github.com/openssl/openssl/files/3506193/openssl.cnf.txt
+#  https://superuser.com/a/1248085
+
 
 # Note that you can include other files from the main configuration
 # file using the .include directive.
