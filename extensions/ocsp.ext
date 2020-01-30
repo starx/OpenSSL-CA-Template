@@ -2,8 +2,8 @@
 # Extension for OCSP signing certificates (`man ocsp`).
 # We’ll apply the ocsp extension when signing the Online Certificate Status Protocol (OCSP) certificate.
 
-basicConstraints 			= CA:FALSE
-subjectKeyIdentifier 		= hash
-authorityKeyIdentifier 		= keyid,issuer
+basicConstraints 				= CA:FALSE
+subjectKeyIdentifier 				= hash
+authorityKeyIdentifier 				= keyid,issuer
 keyUsage 					= critical, digitalSignature
-extendedKeyUsage 			= critical, OCSPSigning
+extendedKeyUsage 				= critical, OCSPSigning

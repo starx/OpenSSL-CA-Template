@@ -1,13 +1,13 @@
 # Not tested
 # [ v3_vpn_server ]
-basicConstraints        	= critical, CA:FALSE
-subjectKeyIdentifier    	= hash
-authorityKeyIdentifier  	= keyid:always, issuer:always
-keyUsage                	= critical, nonRepudiation, digitalSignature, keyEncipherment, keyAgreement 
-extendedKeyUsage        	= critical, serverAuth
-subjectAltName          	= @alt_vpn_server
+basicConstraints        			= critical, CA:FALSE
+subjectKeyIdentifier    			= hash
+authorityKeyIdentifier  			= keyid:always, issuer:always
+keyUsage                			= critical, nonRepudiation, digitalSignature, keyEncipherment, keyAgreement 
+extendedKeyUsage        			= critical, serverAuth
+subjectAltName          			= @alt_vpn_server
 
 [alt_vpn_server]
-DNS.1 = *.vpn-server.test
-DNS.2 = vpn-server.test
-IP = x.x.x.x
+DNS.1 						= *.vpn-server.test
+DNS.2 						= vpn-server.test
+IP 						= x.x.x.x

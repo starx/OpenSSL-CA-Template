@@ -4,7 +4,7 @@
 # This goes against PKIX guidelines but some CAs do it and some software
 # requires this to avoid interpreting an end user certificate as a CA.
 
-basicConstraints 			= CA:FALSE
+basicConstraints 				= CA:FALSE
 
 # Here are some examples of the usage of nsCertType. If it is omitted
 # the certificate can be used for anything *except* object signing.
@@ -22,18 +22,18 @@ basicConstraints 			= CA:FALSE
 # nsCertType 					= client, email, objsign
 
 # This is typical in keyUsage for a client certificate.
-# keyUsage 						= nonRepudiation, digitalSignature, keyEncipherment
+# keyUsage 					= nonRepudiation, digitalSignature, keyEncipherment
 
 # This will be displayed in Netscape's comment listbox.
 nsComment					= "OpenSSL Generated Certificate"
 
 # PKIX recommendations harmless if included in all certificates.
-subjectKeyIdentifier 		= hash
-authorityKeyIdentifier 		= keyid,issuer
+subjectKeyIdentifier 				= hash
+authorityKeyIdentifier 				= keyid,issuer
 
 # This stuff is for subjectAltName and issuerAltname.
 # Import the email address.
-subjectAltName	 			= email:copy
+subjectAltName	 				= email:copy
 
 # An alternative to produce certificates that aren't
 # deprecated according to PKIX.
@@ -42,7 +42,7 @@ subjectAltName	 			= email:copy
 # Copy subject details
 # issuerAltName 				= issuer:copy
 
-#nsCaRevocationUrl			= http://www.domain.dom/ca-crl.pem
+#nsCaRevocationUrl				= http://www.domain.dom/ca-crl.pem
 #nsBaseUrl
 #nsRevocationUrl
 #nsRenewalUrl
@@ -50,4 +50,4 @@ subjectAltName	 			= email:copy
 #nsSslServerName
 
 # This really needs to be in place for it to be a proxy certificate.
-proxyCertInfo				= critical,language:id-ppl-anyLanguage,pathlen:3,policy:foo
+proxyCertInfo					= critical,language:id-ppl-anyLanguage,pathlen:3,policy:foo

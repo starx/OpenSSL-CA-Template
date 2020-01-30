@@ -2,27 +2,27 @@
 # Extensions for server certificates (`man x509v3_config`).
 # We’ll apply the server_cert extension when signing server certificates, such as those used for web servers.
 
-basicConstraints            = CA:FALSE
-nsCertType                  = server
-nsComment                   = "OpenSSL Generated Server Certificate"
-subjectKeyIdentifier        = hash
-authorityKeyIdentifier      = keyid,issuer:always
-keyUsage                    = critical, digitalSignature, keyEncipherment
-keyUsage                    = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
-extendedKeyUsage            = serverAuth
-subjectAltName              = @server_alt_names
-issuerAltName               = issuer:copy
-distinguished_name  		= server_distinguished_name
+basicConstraints            			= CA:FALSE
+nsCertType                  			= server
+nsComment                   			= "OpenSSL Generated Server Certificate"
+subjectKeyIdentifier        			= hash
+authorityKeyIdentifier      			= keyid,issuer:always
+keyUsage                    			= critical, digitalSignature, keyEncipherment
+keyUsage                    			= digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+extendedKeyUsage            			= serverAuth
+subjectAltName              			= @server_alt_names
+issuerAltName               			= issuer:copy
+distinguished_name  				= server_distinguished_name
 
 [server_distinguished_name]
-countryName         		= <%= @country %>
-stateOrProvinceName			= <%= @state %>
-localityName        		= <%= @locality %>
-organizationName    		= <%= @org %>
-commonName          		= <%= @domainName %>
-emailAddress        		= <%= @email %>
+countryName         				= <%= @country %>
+stateOrProvinceName				= <%= @state %>
+localityName        				= <%= @locality %>
+organizationName    				= <%= @org %>
+commonName          				= <%= @domainName %>
+emailAddress        				= <%= @email %>
 
 [server_alt_names]
 DNS.1 						= *.<%= @domainName %>
 DNS.2 						= <%= @domainName %>
-IP 							= <%= @serverIp %>
+IP 						= <%= @serverIp %>
